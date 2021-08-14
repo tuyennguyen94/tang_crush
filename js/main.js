@@ -51,8 +51,8 @@ function switchButton() {
     audio.play();
     var leftNo = $('#no').css("left");
     var topNO = $('#no').css("top");
-    var leftY = $('#yes').css("left");
-    var topY = $('#yes').css("top");
+    var leftY = Math.random() * ($(window).width() - $('#no').width()) * 0.9;
+    var topY = Math.random() * ($(window).height() - $('#no').height()) * 0.9;
     $('#no').css("left", leftY);
     $('#no').css("top", topY);
     $('#yes').css("left", leftNo);
@@ -74,11 +74,13 @@ init()
 
 var n = 0;
 $('#no').mousemove(function() {
-    if (n < 1)
-        switchButton();
-    if (n > 1)
-        moveButton();
-    n++;
+        n++
+        if(n<20 || n>60){
+            switchButton();
+        }
+        if(n>60) n=0;
+        $('#no').tooltip();
+        console.log(n);
 });
 $('#no').click(() => {
     if (screen.width >= 900)
