@@ -16,7 +16,7 @@
 
 <body>
     <script>
-        myAudio = new Audio('./sound.mp3');
+        
     </script>
 
     <div class="wrapper">
@@ -50,15 +50,7 @@
     <script src="./config.js"></script>
     <script src="./js/main.js"></script>
     <script>
-        if (typeof myAudio.loop == 'boolean') {
-            myAudio.loop = true;
-        } else {
-            myAudio.addEventListener('ended', function() {
-                this.currentTime = 0;
-                this.play();
-            }, false);
-        }
-        myAudio.play();
+        
     </script>
 </body>
 

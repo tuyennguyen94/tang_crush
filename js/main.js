@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    myAudio = new Audio('./sound.mp3');
     // process bar
     console.log(CONFIG);
     setTimeout(function() {
@@ -32,6 +32,15 @@ function firstQuestion() {
         //icon: "info",
         confirmButtonText: CONFIG.btnIntro
     }).then(function() {
+        if (typeof myAudio.loop == 'boolean') {
+            myAudio.loop = true;
+        } else {
+            myAudio.addEventListener('ended', function() {
+                this.currentTime = 0;
+                this.play();
+            }, false);
+        }
+        myAudio.play();
         $('.content').show(200);
     })
 }
