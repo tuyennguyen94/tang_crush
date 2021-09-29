@@ -10,7 +10,7 @@ const CONFIG = {
     btnReply: 'Gửi cho Tuyên',
     reply: 'Tại vì cậu đẹp trai hihi <33333',
     mess: 'Tớ biết mà hihi 🥰 ',
-    messDesc: 'còn giờ thì chờ gì nữa mà không inbox cho tớ đi nào.',
+    messDesc: 'còn giờ thì chờ gì nữa mà không inbox cho tớ đi nào .',
     btnAccept: 'oke nha <3',
     messLink: 'mhttps://www.facebook.com/messages/t/100065166715627', //link fb
     bgLink: 'https://c4.wallpaperflare.com/wallpaper/880/299/772/tree-heart-hearts-love-wallpaper-preview.jpg', //link ảnh nền
